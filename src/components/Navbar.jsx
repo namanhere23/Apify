@@ -1,0 +1,6 @@
+import React from 'react';
+import { Plus, SlidersHorizontal, Asterisk } from 'lucide-react';
+export function Navbar({ activeTab, setActiveTab, onOpenIngest, onOpenSettings, apifyActive }) {
+  return <header className="site-header"><div className="header-inner"><button className="brand" onClick={() => setActiveTab('directory')} aria-label="AURA home"><Asterisk size={27} strokeWidth={1.6} /><span>AURA<span className="brand-caption">AGENT DATING STUDIO</span></span></button><nav className="main-nav" aria-label="Main navigation">{[['directory', 'People'], ['simulator', 'Date studio'], ['rankings', 'Rankings']].map(([tab, label]) => <button key={tab} className={activeTab === tab ? 'nav-active' : ''} aria-current={activeTab === tab ? 'page' : undefined} onClick={() => setActiveTab(tab)}>{label}</button>)}</nav><div className="header-actions"><span className="connection"><span className={`status-dot ${apifyActive ? 'status-online' : ''}`} />{apifyActive ? 'Sources connected' : 'Saved sources'}</span><button className="icon-button" onClick={onOpenSettings} aria-label="Connection settings"><SlidersHorizontal size={19} /></button><button className="btn btn-primary btn-small" onClick={onOpenIngest}><Plus size={16} />Add person</button></div></div></header>;
+}
+

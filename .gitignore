@@ -1,0 +1,12 @@
+node_modules/
+.env
+.DS_Store
+dist/
+*.log
+server/data/state.json
+server/data/state.json.tmp
+server/data/retrieval-results.json
+server/data/demo-cohort.json
+server/data/discovery-audit.json
+demo_media/
+*.mp4

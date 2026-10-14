@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.env
+demo_media
+*.mp4
+*.webm
+server/data/state.json
+server/data/retrieval-results.json

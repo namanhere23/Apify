@@ -1,0 +1,41 @@
+{
+  "name": "agentic-dating",
+  "version": "1.0.0",
+  "description": "Agentic Dating Site: Autonomous AI agents date on behalf of real people based on LinkedIn and Instagram profiles.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "dating",
+    "apify",
+    "linkedin",
+    "instagram"
+  ],
+  "author": "Naman Gulati",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.20.0",
+    "canvas-confetti": "^1.9.4",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "lucide-react": "^1.56.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "vite": "^8.3.4"
+  }
+}
