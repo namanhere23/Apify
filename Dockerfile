@@ -12,7 +12,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/server ./server
-RUN mkdir -p /data && chown -R node:node /app /data
+RUN mkdir -p /data && cp server/data/demo-cohort.json /data/demo-cohort.json && chown -R node:node /app /data
 USER node
 EXPOSE 3001
 CMD ["node", "server/index.js"]

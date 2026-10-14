@@ -59,7 +59,7 @@ Account ownership and participation have not been independently verified. These 
 
 ## Persistence and failure behavior
 
-On startup, the server maintains `server/data/state.json` to store imported profiles, analysis, and simulated date sessions. Writes are serialized and use temporary-file replacement. Concurrent imports of the same source pair are deduplicated. The reset API requires an explicit command, and cross-origin state changes are rejected.
+`server/data/demo-cohort.json` holds the included 28 source snapshots. On startup, the server initializes `server/data/state.json` to store profiles, analysis, and simulated date sessions. Writes are serialized and use temporary-file replacement. Concurrent imports of the same source pair are deduplicated. The reset API requires an explicit command, and cross-origin state changes are rejected.
 
 ## Verification
 
